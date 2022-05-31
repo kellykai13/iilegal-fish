@@ -1,0 +1,51 @@
+<!doctype html>
+<form method="POST">
+
+  <head>
+    <title>Tokunaga DTSC 691</title>
+  </head>
+  <body>
+    <h1>Fishing Vessels in Waters off of the United states west coast</h1>
+
+    
+    
+  
+
+  </body>  
+    <select id="region" name="region">
+    </select>
+    
+    <select id="boat" name="boat">
+    </select>
+    
+
+        
+    <button type="submit">Submit</button>
+</form>
+<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+    "use strict";
+
+    var regions = {{ region|tojson }};
+
+    var form = $('form');
+    var region = $('select#region');
+    var boat = $('select#boat');
+
+    for (var key in regions) {
+        region.append($('<option/>', {'value': key, 'text': key}));
+    }
+
+    region.change(function(ev) {
+        boat.empty();
+        boat.append($('<option/>'));
+
+        var boats = regions[region.val()];
+
+        for (var i in boats) {
+            boat.append($('<option/>', {'value': i, 'text': i}));
+        }
+    });
+    
+
+</script>
