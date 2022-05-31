@@ -1,3 +1,5 @@
-# illegal-fish
-# illegal-fish
-# illegal-fish
+The purpose of this project is to develop a machine learning model that can predict whether an oceanic vessel is in the act of fishing or not, and then to determine if this fishing activity is legal or not.
+
+This data is came from logs that are supplied by Automatic Identification System or AIS. AIS is a system that large vessels use at sea to identify themselves. Every few seconds a signal is sent out by this system that other boats, sattelites, and terrestrail recievers can receive. Initially this system was just meant to help improve saftey for large vessels at sea and reduced collisions but now can be used in other ways. AIS devices broadcast the vessel’s identity, location, speed, course, and other data that is useful for identification. I got this data from Global Fishing Watch. They have produced ML algorithms that can identify a boats activity based on this AIS data.
+
+This repo contains a jupyter notebook used to wrangle and clean data an dthen train ML algoritms on that data. Also a jupyter notebook that was used to create animations of a vessels location at see and their current activity. It also contains all the code for a web application built using flask. 
